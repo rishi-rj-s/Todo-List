@@ -30,7 +30,7 @@ main {
   }
 
   #users {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   #fallback {
