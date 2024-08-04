@@ -10,12 +10,13 @@ import { Component, computed, input, Input} from '@angular/core';
 })
 export class UserComponent {
 
-  avatar = input.required<string>();
-  name = input.required<string>();
+ @Input({required:true}) avatar !: string;
+  @Input({required:true}) name !: string;
 
-  imagePath = computed(()=>{
-    return 'assets/users/'+this.avatar()
-  })
+
+  get imagePath(){
+    return 'assets/users/'+this.avatar;
+  }
 
   alertIt():void{
     alert("Hi");
