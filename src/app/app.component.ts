@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectUserId = 'u1';  
+  selectUserId ?: string;  
 
   onSelect(id:string){
     alert('Selected User with ID: '+id);
